@@ -69,8 +69,6 @@ export const checkWinner = (boardChecked, movekey, moveindex) => {
       }
     }
   }
-
-
   return null;
 }
 
