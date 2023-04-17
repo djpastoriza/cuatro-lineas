@@ -56,6 +56,20 @@ export const checkWinner = (boardChecked, movekey, moveindex) => {
     }
   }
 
+  // Comprobar diagonales hacia la izquierda y hacia abajo
+  for (let row = 0; row < rows - 3; row++) {
+    for (let column = columns - 1; column >= 3; column--) {
+      if (
+        boardChecked[row][column] === value &&
+        boardChecked[row + 1][column - 1] === value &&
+        boardChecked[row + 2][column - 2] === value &&
+        boardChecked[row + 3][column - 3] === value
+      ) {
+        return value;
+      }
+    }
+  }
+
 
   return null;
 }
